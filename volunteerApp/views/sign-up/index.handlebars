@@ -1,0 +1,80 @@
+<header>
+  <h4>SIGN UP</h4>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{#each error}}
+      <div class="alert alert-danger">{{this}}</div>
+      {{/each}}
+      <form name="sign-up" action="/sign-up"  method="post" style="border:5px solid orange">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>First Name</span>
+              <input type="text" name="firstName" required data-validation-required-message="Please enter your first name."> </label>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Last Name</span>
+              <input type="text" name="lastName" required data-validation-required-message="Please enter your last name. ">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Email</span>
+              <input type="text" name="email" required data-validation-required-message="Please enter your email address.">
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+                <span>College</span>
+                <select type="text" name="collegeId">
+                  <option value = 1 > Baruch College</option>
+                  <option value = 2 > Bronx Community College</option>
+                  <option value = 3>BMC College</option>
+                  <option value = 4>City College</option>
+                  <option value = 5>John Jay</option>
+                  <option value = 6>Lehman College</option>
+                  
+                </select>
+              </label>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Username</span>
+              <input type="text" name="username">
+              </label>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <label>
+              <span>Password</span>
+              <input type="text" name="password" required data-validation-required-message="Please enter your password.">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix">
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
